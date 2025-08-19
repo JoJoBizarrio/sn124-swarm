@@ -7,7 +7,7 @@ loguru
 xmldiff
 filelock
 pybullet
-bittensor
+#bittensor
 msgpack
 importlib-metadata
 onnxruntime

@@ -129,7 +129,7 @@ class MovingDroneAviary(BaseRLAviary):
         if self._prev_dist==0.0:
             self._prev_dist = dist
             dist_diff = 0.0
-        else:
+        else
             dist_diff = self._prev_dist - dist 
             self._prev_dist = dist
         

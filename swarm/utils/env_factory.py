@@ -67,8 +67,8 @@ def make_env(
     if gui:
         # Hide debug GUI elements & shadows for clearer visuals
         for flag in (p.COV_ENABLE_SHADOWS, p.COV_ENABLE_GUI):
-            p.configureDebugVisualizer(flag, 0, physicsClientId=cli)
-            time.sleep(0.1)
+            p.configureDebugVisualizer(flag, 1, physicsClientId=cli)
+            time.sleep(0.5)
 
     # 3 ─ deterministic reset & world build ----------------------------------
     with contextlib.redirect_stdout(io.StringIO()):

@@ -7,9 +7,10 @@ def track_drone(cli, drone_id) -> None:
     """Keep the PyBullet spectator camera locked on the drone."""
     pos, _ = p.getBasePositionAndOrientation(drone_id,
                                              physicsClientId=cli)
-    tgt = np.add(pos, [0.0, 0.0, 0.4])                 # look ≈0.4 m above CG
+    tg = np.add(pos, [0.0, 0.0, 0.4])                 # look ≈0.4 m above CG
+    #tg = pos
     p.resetDebugVisualizerCamera(cameraDistance=1,   # zoom-out
                                  cameraYaw=0,
-                                 cameraPitch=-25,       # slight downward tilt
-                                 cameraTargetPosition=tgt,
-                                 physicsClientId=cli)
+                                 cameraPitch=-80,       # slight downward tilt
+                                 cameraTargetPosition=tg,
+                                 physicsClientId=cli)   
